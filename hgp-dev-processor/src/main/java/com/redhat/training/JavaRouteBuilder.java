@@ -8,6 +8,7 @@ public class JavaRouteBuilder extends RouteBuilder {
 	public void configure() throws Exception {
 		from("file:in?noop=true")
 		.process(new LogProcessor())
+		.process(new ToLowerCaseProcessor())
 		.to("jms:queue:orders");
 
 	}
