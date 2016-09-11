@@ -13,7 +13,7 @@ public class ToLowerCaseProcessor implements Processor {
 			System.out.println("Message content in lower case:" + payload);
 			exchange.getIn().setBody(payload);
 			String body = exchange.getIn().getBody(String.class);
-			//System.out.println("Message content in lower case:" + body);
+			System.out.println("Message content in lower case:" + body);
 	}
 
 }
